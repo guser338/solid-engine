@@ -5,7 +5,7 @@ import urllib.parse
 requests.packages.urllib3.disable_warnings()
 
 def main():
-    parser = argparse.ArgumentParser(description='YourPHPCMS checkEmail SQL注入漏洞')
+    parser = argparse.ArgumentParser(description='IP网络广播服务平台存在任意文件上传漏洞')
     parser.add_argument('-u', '--url', dest='url', type=str, help='Please input url!')
     parser.add_argument('-f', '--file', dest='file', type=str, help='Please input file!')
     args = parser.parse_args()
